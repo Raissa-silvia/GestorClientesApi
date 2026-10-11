@@ -1,0 +1,24 @@
+@url = https://localhost:7119
+
+GET {{url}}/clientes
+
+###
+POST {{url}}/clientes
+Content-Type: application/json
+
+{ "nome": "Ana Silva", "email": "ana@email.com", "cpf": "12345678901" }
+
+###
+GET {{url}}/clientes
+
+###
+DELETE {{url}}/clientes/1
+
+###
+GET {{url}}/clientes
+
+###
+POST {{url}}/clientes
+Content-Type: application/json
+
+{ "nome": "", "email": "errado", "cpf": "1" }
